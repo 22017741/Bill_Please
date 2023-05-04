@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    android:background="@drawable/billplease"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:typeface="monospace"
+        android:gravity="center"
+        android:id="@+id/BillPlease"
+        android:text="Bill Please"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:layout_margin="5dp"
+        android:id="@+id/textAmount"
+        android:text="@string/amount"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#30ffffff"
+        android:layout_margin="5dp"
+        android:padding="0.1dp"
+        android:id="@+id/editInputAmount"
+        android:inputType="number"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:layout_margin="5dp"
+        android:id="@+id/textNumPax"
+        android:text="@string/paxNo"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#30ffffff"
+        android:layout_margin="5dp"
+        android:padding="0.1dp"
+        android:id="@+id/editInputNumPax"
+        android:inputType="number"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:id="@+id/tbSVS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="SVS Disabled"
+            android:textOn="SVS Enabled" />
+
+        <ToggleButton
+            android:id="@+id/tbGST"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="GST Disabled"
+            android:textOn="GST Enabled" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:layout_margin="5dp"
+        android:id="@+id/textDiscount"
+        android:text="@string/discount"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#30ffffff"
+        android:layout_margin="5dp"
+        android:padding="0.1dp"
+        android:id="@+id/editInputDisc"
+        android:inputType="number"/>
+
+    <RadioGroup
+        android:id="@+id/rgpayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/bCash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="@string/cash"/>
+
+        <RadioButton
+            android:id="@+id/bPaynow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="@string/paynow"/>
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bSplit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:backgroundTint="#d3d3d3"
+            android:layout_margin="5dp"
+            android:textColor="#000000"
+            app:cornerRadius="0dp"
+            android:text="@string/split" />
+
+        <Button
+            android:id="@+id/bReset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:backgroundTint="#d3d3d3"
+            android:layout_margin="5dp"
+            android:textColor="#000000"
+            app:cornerRadius="0dp"
+            android:text="@string/reset"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textTotalBill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textColor="#ffffff"
+        android:text="@string/total_bill" />
+
+    <TextView
+        android:id="@+id/textEachPays"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textColor="#ffffff"
+        android:text="@string/each_pays" />
+
+    <TextView
+        android:id="@+id/howPay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/via"
+        android:textColor="#ffffff"/>
+
+</LinearLayout>
